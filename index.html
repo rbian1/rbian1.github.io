@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    </head>
+    <body>
+        <a-scene>
+        <!-- THIS IS WHERE YOUR CODE WILL GO -->
+            <a-sky color="#afa"></a-sky>
+            <a-plane color="#444" position="0 0 0" rotation="-90 0 0" width="1000" height="1000"></a-plane>
+            
+            <a-sphere radius="2" color="orange" position="0 2 -10" animation="
+            property: position;
+            from: 0 2 -10;
+            to: 0 20 -10;
+            dir: alternate;
+            loop: true;
+            easing: easeInOutQuad;
+            dur: 300;
+            "></a-sphere>
+            
+            <a-box width="10" height="10" position="-20 5 -10" color="red" 
+            animation="property:color;from:#f0a;to:#0fa;dur:300;loop:true;dir:alternate;">
+            </a-box>
+            
+            
+            <a-plane width="10" height="10" position="30 5 -10" color="#2ae" animation="property:rotation;from:0;to:359;loop:true;dur:300;dir:alternate;"></a-plane>
+        
+            <a-box width="5" height="5" depth="5" position="0 100 0" color="red" animation="
+            property: rotation;
+            from: 0;
+            to: 359;
+            loop: true;
+            dur: 200;
+            "></a-box>
+        </a-scene>
+    </body>
+</html>
